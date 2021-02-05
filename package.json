@@ -31,6 +31,7 @@
   ],
   "license": "MIT",
   "scripts": {
+    "prebuild": "mkdir -p public/tutorials",
     "build": "gatsby build --prefix-paths",
     "postbuild": "bash scripts/move-to-build.sh",
     "build-storybook": "build-storybook -s ./static",
