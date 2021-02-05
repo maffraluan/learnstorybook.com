@@ -31,10 +31,11 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build --prefix-paths",
+    "postbuild": "bash scripts/move-to-build.sh",
     "build-storybook": "build-storybook -s ./static",
     "dev": "gatsby develop",
-    "serve": "gatsby serve",
+    "serve": "gatsby serve --prefix-paths",
     "format": "prettier-eslint --write '**/*.js'",
     "lint": "eslint .",
     "storybook": "start-storybook -s ./static -p 6006",
