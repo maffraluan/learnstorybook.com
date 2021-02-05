@@ -2,7 +2,6 @@ import React, { useMemo } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { styles } from '@storybook/design-system';
-import { withPrefix } from 'gatsby';
 import Guide from './Guide';
 import GatsbyLink from '../../basics/GatsbyLink';
 
@@ -76,7 +75,7 @@ const Guides = ({ chaptersEdges, guidesEdges }) => {
             <StyledGuide
               chapterCount={chapterCountByGuide[guideNode.fields.guide]}
               description={guideNode.frontmatter.description}
-              imagePath={withPrefix(guideNode.frontmatter.thumbImagePath)}
+              imagePath={guideNode.frontmatter.thumbImagePath}
               themeColor={guideNode.frontmatter.themeColor}
               title={guideNode.frontmatter.title}
             />
